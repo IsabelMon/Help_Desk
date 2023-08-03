@@ -1,0 +1,93 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    title Formulario para Mesa de Ayuda
+  body
+    .container.mt-5
+      form
+        // Fecha y Hora de Solicitud
+        .form-group
+          label(for="fechaHoraSolicitud") Fecha y Hora de Solicitud:
+          input(type="datetime-local", class="form-control", id="fechaHoraSolicitud")
+
+        // Fecha y Hora Finalizado
+        .form-group
+          label(for="fechaHoraFinalizado") Fecha y Hora Finalizado:
+          input(type="datetime-local", class="form-control", id="fechaHoraFinalizado")
+
+        // Mes Finalizado
+        .form-group
+          label(for="mesFinalizado") Mes Finalizado:
+          input(type="text", class="form-control", id="mesFinalizado")
+
+        // Tipo de Solicitud
+        .form-group
+          label(for="tipoSolicitud") Tipo de Solicitud:
+          select(class="form-control", id="tipoSolicitud")
+            option(value="Incidentes") Incidentes
+            option(value="Requerimiento") Requerimiento
+            option(value="Administrativo") Administrativo
+
+        // Tipo de Atención
+        .form-group
+          label(for="tipoAtencion") Tipo de Atención:
+          select(class="form-control", id="tipoAtencion")
+            option(value="Remoto") Remoto
+            option(value="EnSitio") En Sitio
+
+        // Estado
+        .form-group
+          label(for="estado") Estado:
+          select(class="form-control", id="estado")
+            option(value="Resuelto") Resuelto
+            option(value="Pendiente") Pendiente
+
+        // Prioridad
+        .form-group
+          label(for="prioridad") Prioridad:
+          select(class="form-control", id="prioridad")
+            option(value="Alto") Alto
+            option(value="Medio") Medio
+            option(value="Bajo") Bajo
+
+        // Descripción del Problema
+        .form-group
+          label(for="descripcionProblema") Descripción del Problema:
+          textarea(class="form-control", id="descripcionProblema", rows="4")
+
+        // Solicitado Por
+        .form-group
+          label(for="solicitadoPor") Solicitado Por:
+          input(type="text", class="form-control", id="solicitadoPor")
+
+        // Área
+        .form-group
+          label(for="area") Área:
+          input(type="text", class="form-control", id="area")
+
+        // Cargo
+        .form-group
+          label(for="cargo") Cargo:
+          input(type="text", class="form-control", id="cargo")
+
+        // Atendido Por
+        .form-group
+          label(for="atendidoPor") Atendido Por:
+          select(class="form-control", id="atendidoPor")
+            option(value="HugoCorrea") Hugo Correa
+            option(value="AnaIsabelMontes") Ana Isabel Montes
+
+        // Solución
+        .form-group
+          label(for="solucion") Solución:
+          textarea(class="form-control", id="solucion", rows="4")
+
+        button(type="submit", class="btn btn-primary") Enviar
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+
