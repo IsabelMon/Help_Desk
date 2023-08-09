@@ -10,6 +10,10 @@ const auth = new google.auth.GoogleAuth({
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
+let SPREADSHEET_ID = '1XG_KJHAvb-obePiPFwyuuQn3RJagC64i7onbO7YUiAs';
+
+
+
 async function accederGoogleSheet() {
   try {
     // Obtener una instancia del cliente de Google Sheets
@@ -52,9 +56,35 @@ async function accederGoogleSheet() {
 }
 
 accederGoogleSheet();
+async function guardarForm() {
+  try {
+ 
+    const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+    await doc.useServiceAccountAuth(auth);
+    await doc.loadInfo(); // Cargar información de la hoja de cálculo
+
+    // Acceder a la hoja deseada (índice 0 para la primera hoja)
+    const sheet = doc.sheetsByIndex[0];
+
+    // Agregar una nueva fila
+    await sheet.addRow({
+      Dato1: dato1,
+      Dato2: dato2,
+    });
+
+    res.send('Datos escritos en la hoja de cálculo.');
+  } catch (err) {
+    console.error('Error:', err.message);
+    res.send('Error al escribir en la hoja de cálculo.');
+  }
+};
+
+
+guardarForm();
 
 module.exports = {
-  accederGoogleSheet : accederGoogleSheet
+  accederGoogleSheet : accederGoogleSheet,
+  guardarForm: guardarForm
 }
 
 /*import { JWT } from 'google-auth-library';

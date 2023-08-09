@@ -8,10 +8,17 @@ const obtenerInformes = async (req,res)=>{
     readDataResponse = await GoogleSheet.accederGoogleSheet();
     res.render('index',{readDataResponse})
 }
- 
+const pintarForm = async (req,res)=>{
+  
+  res.render('index',{readDataResponse})
+}
 
-  module.exports = {
-    obtenerInformes,
-   
-  };
+const guardarForm = async (req,res)=>{
+  GoogleSheet.guardarForm(req.body);
+  res.redirect('/');
+}
+
+module.exports = {
+    obtenerInformes, pintarForm, guardarForm
+};
   
