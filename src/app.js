@@ -10,16 +10,19 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.post('/enviar-datos', (req, res) => {
-    const nombre = req.body.nombre;
-    const correo = req.body.correo;
-  
-    // Realiza las acciones necesarias con los datos
-    // Por ejemplo, puedes guardarlos en una base de datos
-  
-    res.send(`Datos recibidos: Nombre - ${nombre}, Correo - ${correo}`);
-  });
+app.post('/index', async (req, res) => {
+  const formData = req.body;
 
+  try {
+    // Aquí llamas a la función en googleSheet.js para procesar los datos
+    await escribirEnGoogleSheet(formData);
+
+    res.send('Datos recibidos y procesados con éxito.');
+  } catch (err) {
+    console.error('Error:', err.message);
+    res.send('Error al procesar los datos.');
+  }
+});
 app.use(require('./routes/google.routes'));
 
 
