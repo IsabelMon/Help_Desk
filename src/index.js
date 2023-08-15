@@ -1,5 +1,5 @@
 const app = require('./app');
 
-app.listen(3001, ()=>{
+app.listen(3000, ()=>{
     console.log('Servidor all right');
 });

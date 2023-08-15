@@ -1,4 +1,5 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
+
 const { google } = require('googleapis');
 
 // Cargar las credenciales desde el archivo JSON
@@ -11,7 +12,7 @@ const auth = new google.auth.GoogleAuth({
 });
 
 
-async function accederGoogleSheet() {
+/*async function accederGoogleSheet() {
   try {
     // Obtener una instancia del cliente de Google Sheets
     const sheets = google.sheets({ version: 'v4', auth });
@@ -22,7 +23,7 @@ async function accederGoogleSheet() {
     // Leer datos desde la hoja
     const readDataResponse = await sheets.spreadsheets.values.get({
       spreadsheetId,
-      range: 'BASE_ENCUESTA!A1:B10', // Especifica el rango de celdas que deseas leer
+      range: 'BASE_ENCUESTA!A1:L2', // Especifica el rango de celdas que deseas leer
     });
 
     const rows = readDataResponse.data.values;
@@ -42,25 +43,55 @@ async function accederGoogleSheet() {
   }
 }
 
-accederGoogleSheet();
+accederGoogleSheet();*/
 
 
 
 async function escribirEnGoogleSheet(formData) {
-  const doc = new GoogleSpreadsheet('1XG_KJHAvb-obePiPFwyuuQn3RJagC64i7onbO7YUiAs'); // Cambia esto con tu ID de hoja de cálculo
+  console.log('Escribiendo en Google Sheets...');
+  try{
+    const sheets = google.sheets({ version: 'v4', auth });
 
-  try {
-    await doc.useServiceAccountAuth(auth); // Utiliza el objeto 'auth' para la autenticación
-    await doc.loadInfo();
+    // ID de la hoja de Google Sheets que deseas leer/escribir
+    const spreadsheetId = '1XG_KJHAvb-obePiPFwyuuQn3RJagC64i7onbO7YUiAs';
 
-    const sheet = doc.sheetsByIndex[0];
-
-    await sheet.addRow({
-      FechaHoraSolicitud: formData.fechaHoraSolicitud,
-      FechaHoraFinalizado: formData.fechaHoraFinalizado,
-      // ... otros campos
+    const sheet = await sheets.spreadsheets.get({
+      spreadsheetId,
     });
 
+    // Obtener la última fila utilizada
+    const lastUsedRow = sheet.rowCount + 1; // La próxima fila disponible
+
+    // Definir el rango usando la última fila disponible
+    const sheetTitle = 'BASE_ENCUESTA'; // Cambia esto con el título de tu hoja
+    
+    await sheets.spreadsheets.values.append({
+      spreadsheetId,
+      range: `${sheetTitle}!A2`, // Cambia esto para apuntar a la primera celda de la siguiente fila disponible
+      valueInputOption: 'RAW',
+      insertDataOption: 'INSERT_ROWS',
+      resource: {
+        values: [
+          [
+            formData.fechaHoraSolicitud,
+            formData.fechaHoraFinalizado,
+            formData.mesFinalizado,
+            formData.tipoAtencion,
+            formData.estado,
+            formData.prioridad,
+            
+            formData.descripcionProblema,
+            formData.solicitadoPor,
+            formData.area,
+            formData.cargo,
+            formData.atendidoPor,
+            formData.solucion,
+          ],
+        ],
+      },
+    });
+    console.log('Datos a escribir:', formData);
+    console.log('Fin de la escritura en Google Sheets...');
     console.log('Datos escritos en la hoja de cálculo.');
   } catch (err) {
     console.error('Error al escribir en la hoja de cálculo:', err.message);
@@ -68,9 +99,8 @@ async function escribirEnGoogleSheet(formData) {
 }
 
 
-
 module.exports = {
-  accederGoogleSheet : accederGoogleSheet,
+  //accederGoogleSheet : accederGoogleSheet,
   
   escribirEnGoogleSheet : escribirEnGoogleSheet
 }

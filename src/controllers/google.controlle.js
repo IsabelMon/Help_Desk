@@ -6,8 +6,11 @@ const obtenerInformes = async (req,res)=>{
     readDataResponse = await GoogleSheet.accederGoogleSheet();
     res.render('index',{readDataResponse})
 }
+
 const escribirEnGoogleSheet = async (req,res)=>{
-  res.render('index',{readDataResponse})
+
+  GoogleSheet.escribirEnGoogleSheet(req.body);
+
 }
 
 module.exports = {
