@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js-bootstrap-css/1.2.1/typeaheadjs.min.css" rel="stylesheet">
+  <title>Formulario para Mesa de Ayuda</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <form method="post" action="/index">
+      <div class="row">
+        <!-- Fecha y Hora de Solicitud -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="fechaHoraSolicitud">Fecha y Hora de Solicitud:</label>
+            <input type="datetime-local" class="form-control" id="fechaHoraSolicitud" name="fechaHoraSolicitud">
+          </div>
+        </div>
+        <!-- Fecha y Hora Finalizado -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="fechaHoraFinalizado">Fecha y Hora Finalizado:</label>
+            <input type="datetime-local" class="form-control" id="fechaHoraFinalizado" name="fechaHoraFinalizado">
+          </div>
+        </div>
+        <!-- Mes Finalizado -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="mesFinalizado">Mes Finalizado:</label>
+            <input type="text" class="form-control" id="mesFinalizado" name="mesFinalizado">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Tipo de Solicitud -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="tipoSolicitud">Tipo de Solicitud:</label>
+            <select class="form-control" id="tipoSolicitud" name="tipoSolicitud">
+              <option value="Incidentes">Incidentes</option>
+              <option value="Requerimiento">Requerimiento</option>
+              <option value="Administrativo">Administrativo</option>
+            </select>
+          </div>
+        </div>
+        <!-- Tipo de Atención -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="tipoAtencion">Tipo de Atención:</label>
+            <select class="form-control" id="tipoAtencion" name="tipoAtencion">
+              <option value="Remoto">Remoto</option>
+              <option value="EnSitio">En Sitio</option>
+            </select>
+          </div>
+        </div>
+        <!-- Estado -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="estado">Estado:</label>
+            <select class="form-control" id="estado" name="estado">
+              <option value="Resuelto">Resuelto</option>
+              <option value="Pendiente">Pendiente</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prioridad -->
+      <div class="form-group">
+        <label for="prioridad">Prioridad:</label>
+        <select class="form-control" id="prioridad" name="prioridad">
+          <option value="Alto">Alto</option>
+          <option value="Medio">Medio</option>
+          <option value="Bajo">Bajo</option>
+        </select>
+      </div>
+
+      <!-- Descripción del Problema -->
+      <div class="form-group">
+        <label for="descripcionProblema">Descripción del Problema:</label>
+        <textarea class="form-control" id="descripcionProblema" name="descripcionProblema" rows="4"></textarea>
+      </div>
+
+      <div class="row">
+        <!-- Solicitado Por -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="solicitadoPor">Solicitado Por:</label>
+            <select class="form-control" id="solicitadoPor" name="solicitadoPor">
+              <!-- Aquí se generarán las opciones dinámicamente en tu código JavaScript -->
+            </select>
+          </div>
+        </div>
+        <!-- Área -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="area">Área:</label>
+            <input type
+            <input type="text" class="form-control" id="area" name="area">
+          </div>
+        </div>
+        <!-- Cargo -->
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="cargo">Cargo:</label>
+            <input type="text" class="form-control" id="cargo" name="cargo">
+          </div>
+        </div>
+      </div>
+
+      <!-- Atendido Por -->
+      <div class="form-group">
+        <label for="atendidoPor">Atendido Por:</label>
+        <select class="form-control" id="atendidoPor" name="atendidoPor">
+          <option value="HugoCorrea">Hugo Correa</option>
+          <option value="AnaIsabelMontes">Ana Isabel Montes</option>
+        </select>
+      </div>
+
+      <!-- Solución -->
+      <div class="form-group">
+        <label for="solucion">Solución:</label>
+        <textarea class="form-control" id="solucion" name="solucion" rows="4"></textarea>
+      </div>
+
+      <button type="button" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+  <script src="/usuariosCargos.js"></script>
+  <script src="../typeahead.js"></script>
+  <script src="/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

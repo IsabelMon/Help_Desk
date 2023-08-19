@@ -11,10 +11,12 @@ html(lang="es")
   body
     .container.mt-5
       form(method="post" action="/index")
-        // Fecha y Hora de Solicitud
-        .form-group
-          label(for="fechaHoraSolicitud") Fecha y Hora de Solicitud:
-          input(type="datetime-local", class="form-control", id="fechaHoraSolicitud", name="fechaHoraSolicitud")
+        .row
+          // Fecha y Hora de Solicitud
+          .col-md-4
+            .form-group
+              label(for="fechaHoraSolicitud") Fecha y Hora de Solicitud:
+              input(type="datetime-local", class="form-control", id="fechaHoraSolicitud", name="fechaHoraSolicitud")
 
         script.
           // Obtener la fecha y hora actual en el formato adecuado para el input
@@ -30,9 +32,10 @@ html(lang="es")
 
           document.getElementById('fechaHoraSolicitud').value = formattedDate;
         // Fecha y Hora Finalizado
-        .form-group
-          label(for="fechaHoraFinalizado") Fecha y Hora Finalizado:
-          input(type="datetime-local", class="form-control", id="fechaHoraFinalizado" , name="fechaHoraFinalizado")
+        .col-md-4
+            .form-group
+              label(for="fechaHoraFinalizado") Fecha y Hora Finalizado:
+              input(type="datetime-local", class="form-control", id="fechaHoraFinalizado" , name="fechaHoraFinalizado")
 
         script.
           // Obtener la fecha y hora actual en el formato adecuado para el input
@@ -97,8 +100,9 @@ html(lang="es")
         // Solicitado Por
         .form-group
           label(for="solicitadoPor") Solicitado Por:
-          select.form-control(id="solicitadoPor" name="solicitadoPor")
+          select#solicitadoPor.form-control( name="solicitadoPor")
            each nombre in Object.keys(usuariosCargos)
+           console.log(nombre)
               option(value=nombre)= nombre
          
 
@@ -111,7 +115,7 @@ html(lang="es")
         // Cargo
         .form-group
           label(for="cargo") Cargo:
-          input(type="text", class="form-control", id="cargo" , name="cargo" )
+          input#cargo.form-control(type="text", name="cargo" )
 
         // Atendido Por
         .form-group
@@ -130,9 +134,10 @@ html(lang="es")
         
     script(src="https://code.jquery.com/jquery-3.6.0.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js")  
-    script(src="usuariosCargos.js")
+    script(src="./usuariosCargos.js")
+
     script(src="../typeahead.js")
-    script(src="script.js")
+    script(src="./script.js")
     
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
     script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js")
