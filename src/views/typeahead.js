@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     // Carga la lista de usuarios y cargos desde usuariosCargos.js
-    const usuariosCargos = require('./views/usuariosCargos.js');
+    const usuariosCargos = require('/usuariosCargos.js');
   
     // Obtén el elemento <input> del campo de nombre
     const $inputNombre = $('#nombre');

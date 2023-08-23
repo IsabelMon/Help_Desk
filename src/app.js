@@ -22,7 +22,9 @@ app.get('/usuariosCargos.js', (req, res) => {
 app.get('/script.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'script.js'));
 });
-
+app.get('/typeahead.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'typeahead.js'));
+});
 
 app.get('/', (req, res) => {
   res.render('index', { usuariosCargos }); // Pasa el objeto usuariosCargos a la vista
