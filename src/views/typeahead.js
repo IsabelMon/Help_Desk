@@ -11,10 +11,15 @@ $(document).ready(function() {
     // Al seleccionar un nombre, actualiza automáticamente el campo de "Cargo"
     $inputNombre.on('typeahead:select', function(e, nombre) {
       console.log('Nombre seleccionado:', nombre);
-      console.log('Usuarios y Cargos:', usuariosCargos);
-      const selectedCargo = usuariosCargos[nombre];
-      const $inputCargo = $('#cargo');
-      $inputCargo.val(selectedCargo);
+      const selectedInfo = usuariosCargos[nombre];
+      if (selectedInfo) {
+        const $inputArea = $('#area');
+        const $inputPlaca = $('#placa');
+        const $inputCargo = $('#cargo');
+        $inputArea.val(selectedInfo.area);
+        $inputCargo.val(selectedInfo.cargo); 
+        $inputPlaca.val(selectedInfo.placa);
+      }
     });
     
     

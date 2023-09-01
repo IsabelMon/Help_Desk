@@ -11,42 +11,6 @@ const auth = new google.auth.GoogleAuth({
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
-
-/*async function accederGoogleSheet() {
-  try {
-    // Obtener una instancia del cliente de Google Sheets
-    const sheets = google.sheets({ version: 'v4', auth });
-
-    // ID de la hoja de Google Sheets que deseas leer/escribir
-    const spreadsheetId = '1XG_KJHAvb-obePiPFwyuuQn3RJagC64i7onbO7YUiAs';
-
-    // Leer datos desde la hoja
-    const readDataResponse = await sheets.spreadsheets.values.get({
-      spreadsheetId,
-      range: 'BASE_ENCUESTA!A1:L2', // Especifica el rango de celdas que deseas leer
-    });
-
-    const rows = readDataResponse.data.values;
-    if (rows.length) {
-      console.log('Datos leídos:');
-      rows.forEach((row) => {
-        console.log(`${row[0]}, ${row[1]}`);
-      });
-    } else {
-      console.log('No se encontraron datos.');
-    }
-
-
-    console.log('Datos escritos con éxito.');
-  } catch (err) {
-    console.error('Error:', err.message);
-  }
-}
-
-accederGoogleSheet();*/
-
-
-
 async function escribirEnGoogleSheet(formData) {
   console.log('Escribiendo en Google Sheets...');
   try{
@@ -65,7 +29,10 @@ async function escribirEnGoogleSheet(formData) {
     // Definir el rango usando la última fila disponible
     const sheetTitle = 'BASE_ENCUESTA'; // Cambia esto con el título de tu hoja
     
-    await sheets.spreadsheets.values.append({
+   
+
+
+     await sheets.spreadsheets.values.append({
       spreadsheetId,
       range: `${sheetTitle}!A2`, // Cambia esto para apuntar a la primera celda de la siguiente fila disponible
       valueInputOption: 'RAW',
@@ -75,11 +42,13 @@ async function escribirEnGoogleSheet(formData) {
           [
             formData.fechaHoraSolicitud,
             formData.fechaHoraFinalizado,
-            formData.mesFinalizado,
+            '', // Esto es para omitir la columna C
+            '', // Esto es para omitir la columna D
+            '', // Esto es para omitir la columna E
+            '',
             formData.tipoAtencion,
             formData.estado,
             formData.prioridad,
-            
             formData.descripcionProblema,
             formData.solicitadoPor,
             formData.area,
@@ -98,10 +67,8 @@ async function escribirEnGoogleSheet(formData) {
   }
 }
 
-
 module.exports = {
-  //accederGoogleSheet : accederGoogleSheet,
-  
   escribirEnGoogleSheet : escribirEnGoogleSheet
 }
+
 

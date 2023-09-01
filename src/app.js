@@ -7,13 +7,17 @@ const path = require('path')
 
 //app.set('views', './src/views');
 ///app.set('view engine', 'pug');
-//app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('views'));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
+app.get('/buscarequipos.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', '/buscarequipos.html'));
+});
+
 
 app.get('/usuariosCargos.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'usuariosCargos.js'));
