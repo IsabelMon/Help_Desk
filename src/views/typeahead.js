@@ -16,9 +16,11 @@ $(document).ready(function() {
         const $inputArea = $('#area');
         const $inputPlaca = $('#placa');
         const $inputCargo = $('#cargo');
+        const $inputTipo = $('#tipo');
         $inputArea.val(selectedInfo.area);
         $inputCargo.val(selectedInfo.cargo); 
         $inputPlaca.val(selectedInfo.placa);
+        $inputTipo.val(selectedInfo.tipo);
       }
     });
     
