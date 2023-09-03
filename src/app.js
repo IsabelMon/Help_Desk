@@ -7,6 +7,7 @@ const path = require('path')
 
 //app.set('views', './src/views');
 ///app.set('view engine', 'pug');
+// si no lleva esto no funciona , es lo que maneja el body
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('views'));
@@ -36,12 +37,18 @@ app.get('/', (req, res) => {
 
 
 app.post('/', (req, res) => {
+  console.log("🚀 datos del body:", req.body)
+
   const selectedUsuario = req.body.solicitadoPor;
   const selectedCargo = usuariosCargos[selectedUsuario] || '';
 
-  res.render('index', { selectedUsuario, selectedCargo, usuariosCargos });
+  //mandamos los parametro a la funcion 
+  escribirEnGoogleSheet({ selectedUsuario, selectedCargo, ...req.body })
+  // res.render('index', { selectedUsuario, selectedCargo, usuariosCargos });
+  res.send('ok')
 });
 
+//no sirve esto
 app.post('/', escribirEnGoogleSheet);
 
 app.use(require('./routes/google.routes'));

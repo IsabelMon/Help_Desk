@@ -12,7 +12,7 @@ const auth = new google.auth.GoogleAuth({
 });
 
 async function escribirEnGoogleSheet(formData) {
-  console.log('Escribiendo en Google Sheets...');
+  console.log('Escribiendo en Google Sheets...',formData);
   try{
     const sheets = google.sheets({ version: 'v4', auth });
 
