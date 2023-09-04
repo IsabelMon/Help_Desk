@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/html/login.html'));
 });
 
-app.get('/hojaEncuesta', (req, res) => {
+app.get('/hojaEncuesta.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/html/hojaEncuesta.html'));
 });
 app.get('/buscarequipos', (req, res) => {

@@ -9,12 +9,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js-bootstrap-css/1.2.1/typeaheadjs.min.css" rel="stylesheet">
   <title>Formulario para Mesa de Ayuda</title>
   <style>
-    /* Estilos para el formulario */
+    
     .container {
         background-color: #3498db; /* Color de fondo azul */
         color: #fff; /* Color de texto blanco */
         padding: 20px;
         border-radius: 10px; /* Bordes redondeados */
+        width: 300;
     }
 
     .container h1 {
@@ -73,16 +74,16 @@
     <form method="POST" action="/">
       <div class="row">
         <!-- Fecha y Hora de Solicitud -->
-        <div class="col-md-4">
-          <div class="mb-3">
+        <div class="col-md-3">
+          <div class="mb-2">
             <label class="form-label" for="fechaHoraSolicitud">Fecha y Hora de Solicitud:</label>
             <input type="datetime-local" class="form-control" id="fechaHoraSolicitud" name="fechaHoraSolicitud">
           </div>
         </div>
 
         <!-- Fecha y Hora Finalizado -->
-        <div class="col-md-4">
-          <div class=" mb-3">
+        <div class="col-md-3">
+          <div class=" mb-2">
             <label class="form-label" for="fechaHoraFinalizado">Fecha y Hora Finalizado:</label>
             <input type="datetime-local" class="form-control" id="fechaHoraFinalizado" name="fechaHoraFinalizado">
           </div>
@@ -124,13 +125,16 @@
       </div>
 
       <!-- Prioridad -->
-      <div class=" mb-3">
-        <label class="form-label" for="prioridad">Prioridad:</label>
+      <div class=" col-md-4">
+        <div class=" mb-3">
+          <label class="form-label" for="prioridad">Prioridad:</label>
         <select class="form-control" id="prioridad" name="prioridad">
           <option value="Alto">Alto</option>
           <option value="Medio">Medio</option>
           <option value="Bajo">Bajo</option>
         </select>
+        </div>
+        
       </div>
 
       <!-- Descripción del Problema -->
