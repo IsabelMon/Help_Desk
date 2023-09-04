@@ -5,33 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js-bootstrap-css/1.2.1/typeaheadjs.min.css" rel="stylesheet">
   <title>Formulario para Mesa de Ayuda</title>
+  <style>
+    /* Estilos para el formulario */
+    .container {
+        background-color: #3498db; /* Color de fondo azul */
+        color: #fff; /* Color de texto blanco */
+        padding: 20px;
+        border-radius: 10px; /* Bordes redondeados */
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .form-control {
+        background-color: #fff; /* Color de fondo blanco para campos de entrada */
+        color: #333; /* Color de texto oscuro */
+        border: none; /* Sin bordes */
+        border-radius: 5px; /* Bordes redondeados */
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        background-color: #2980b9; /* Color de fondo azul más oscuro para el botón */
+        color: #fff; /* Color de texto blanco */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Encuesta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Informes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="buscarequipos.html">Buscar equipos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Hoja de vida del equipo</a>
-          </li>
-        </ul>
+  
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Encuesta</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="">Informes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="buscarequipos.html">Buscar equipos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link disabled" aria-disabled="true">Hoja de vida del equipo</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </div>
   </nav>
 
   <div class="container mt-5">
@@ -40,18 +74,16 @@
       <div class="row">
         <!-- Fecha y Hora de Solicitud -->
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="fechaHoraSolicitud">Fecha y Hora de Solicitud:</label>
+          <div class="mb-3">
+            <label class="form-label" for="fechaHoraSolicitud">Fecha y Hora de Solicitud:</label>
             <input type="datetime-local" class="form-control" id="fechaHoraSolicitud" name="fechaHoraSolicitud">
           </div>
         </div>
 
-      
-        
         <!-- Fecha y Hora Finalizado -->
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="fechaHoraFinalizado">Fecha y Hora Finalizado:</label>
+          <div class=" mb-3">
+            <label class="form-label" for="fechaHoraFinalizado">Fecha y Hora Finalizado:</label>
             <input type="datetime-local" class="form-control" id="fechaHoraFinalizado" name="fechaHoraFinalizado">
           </div>
         </div>
@@ -60,8 +92,8 @@
       <div class="row">
         <!-- Tipo de Solicitud -->
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="tipoSolicitud">Tipo de Solicitud:</label>
+          <div class=" mb-3">
+            <label class="form-label" for="tipoSolicitud">Tipo de Solicitud:</label>
             <select class="form-control" id="tipoSolicitud" name="tipoSolicitud">
               <option value="Incidentes">Incidentes</option>
               <option value="Requerimiento">Requerimiento</option>
@@ -71,8 +103,8 @@
         </div>
         <!-- Tipo de Atención -->
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="tipoAtencion">Tipo de Atención:</label>
+          <div class=" mb-3">
+            <label class="form-label" for="tipoAtencion">Tipo de Atención:</label>
             <select class="form-control" id="tipoAtencion" name="tipoAtencion">
               <option value="Remoto">Remoto</option>
               <option value="EnSitio">En Sitio</option>
@@ -81,8 +113,8 @@
         </div>
         <!-- Estado -->
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="estado">Estado:</label>
+          <div class=" mb-3">
+            <label class="form-label" for="estado">Estado:</label>
             <select class="form-control" id="estado" name="estado">
               <option value="Resuelto">Resuelto</option>
               <option value="Pendiente">Pendiente</option>
@@ -92,8 +124,8 @@
       </div>
 
       <!-- Prioridad -->
-      <div class="input-group mb-3">
-        <label class="input-group-text" for="prioridad">Prioridad:</label>
+      <div class=" mb-3">
+        <label class="form-label" for="prioridad">Prioridad:</label>
         <select class="form-control" id="prioridad" name="prioridad">
           <option value="Alto">Alto</option>
           <option value="Medio">Medio</option>
@@ -102,8 +134,8 @@
       </div>
 
       <!-- Descripción del Problema -->
-      <div class="input-group mb-3">
-        <label  for="descripcionProblema"></label>
+      <div class="input-group mb  mb-3">
+        <label class="form-label"  for="descripcionProblema"></label>
         <textarea placeholder="Descripción del Problema" class="form-control" id="descripcionProblema" name="descripcionProblema" rows="4"></textarea>
       </div>
 
@@ -112,8 +144,8 @@
       <div class="row mb-3">
         <!-- Solicitado Por -->
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text"  for="solicitadoPor">Solicitado por</label>
+          <div class=" mb-3">
+            <label class="form-label"  for="solicitadoPor">Solicitado por</label>
             <select class="form-control" id="solicitadoPor" name="solicitadoPor">
               <!-- Aquí se generarán las opciones dinámicamente en tu código JavaScript -->
             </select>
@@ -123,23 +155,24 @@
        
         <!-- Área -->
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="area">Área:</label>
+          <div class="mb-3">
+            <label class="form-label" for="area">Área:</label>
             <input type="text" class="form-control" id="area" name="area">
           </div>
         </div>
         <!-- Cargo -->
+
         <div class="col-md-4">
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="cargo">Cargo:</label>
+          <div class=" mb-3">
+            <label class="form-label" for="cargo">Cargo:</label>
             <input type="text" class="form-control" id="cargo" name="cargo">
           </div>
         </div>
-      </div>
+      
 
-      <div class="row mb-3">
+     
         <!-- Placa -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="placa" class="form-label">Placa:</label>
                 <input type="text" class="form-control" id="placa" name="placa">
@@ -152,11 +185,11 @@
                 <input type="text" class="form-control" id="tipo" name="tipo">
             </div>
         </div>
-    </div>
+      </div>
 
       <!-- Atendido Por -->
-      <div class="input-group mb-3">
-        <label class="input-group-text" for="atendidoPor">Atendido Por:</label>
+      <div class="mb-3">
+        <label class="input-group mb" for="atendidoPor">Atendido Por:</label>
         <select class="form-control" id="atendidoPor" name="atendidoPor">
           <option value="HugoCorrea">Hugo Correa</option>
           <option value="AnaIsabelMontes">Ana Isabel Montes</option>
