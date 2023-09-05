@@ -22,8 +22,8 @@ app.use(function (req, res, next) {
 
 })
 
-app.use('/static', express.static(path.join(__dirname, 'views')))
-
+//app.use('/static', express.static(path.join(__dirname, 'views')))
+app.use(express.static('views'));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/html/login.html'));
 });
@@ -59,7 +59,7 @@ app.get('/typeahead.js', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('hojaEncuesta', { usuariosCargos }); // Pasa el objeto usuariosCargos a la vista
+  res.render('index', { usuariosCargos }); // Pasa el objeto usuariosCargos a la vista
 });
 
 
@@ -71,13 +71,10 @@ app.post('/', (req, res) => {
 
   //mandamos los parametro a la funcion 
   escribirEnGoogleSheet({ selectedUsuario, selectedCargo, ...req.body })
-res.render('index', { selectedUsuario, selectedCargo, usuariosCargos });
+  //res.render('hojaEncuesta', { selectedUsuario, selectedCargo, usuariosCargos });
   res.send('ok')
 });
 
-
-
-//no sirve esto
 app.post('/', escribirEnGoogleSheet);
 
 app.use(require('./routes/google.routes'));
