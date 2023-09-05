@@ -25,12 +25,15 @@ app.use(function (req, res, next) {
 //app.use('/static', express.static(path.join(__dirname, 'views')))
 app.use(express.static('views'));
 app.get('/', (req, res) => {
+
   res.sendFile(path.join(__dirname, 'views/html/login.html'));
 });
 
 app.get('/hojaEncuesta.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/html/hojaEncuesta.html'));
 });
+
+
 app.get('/buscarequipos', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/html/buscarequipos.html'));
 });
@@ -59,7 +62,7 @@ app.get('/typeahead.js', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('index', { usuariosCargos }); // Pasa el objeto usuariosCargos a la vista
+  res.render('', { usuariosCargos }); // Pasa el objeto usuariosCargos a la vista
 });
 
 
@@ -71,7 +74,7 @@ app.post('/', (req, res) => {
 
   //mandamos los parametro a la funcion 
   escribirEnGoogleSheet({ selectedUsuario, selectedCargo, ...req.body })
-  //res.render('hojaEncuesta', { selectedUsuario, selectedCargo, usuariosCargos });
+  //res.render('hojaEncuesta.html', { selectedUsuario, selectedCargo, usuariosCargos });
   res.send('ok')
 });
 
