@@ -2,9 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { escribirEnGoogleSheet } = require('./spreadsheet'); // Importa la función escribirEnGoogleSheet
 const usuariosCargos = require('./views/js/usuariosCargos');
+const axios = require('axios');
 const app = express();
 const path = require('path')
 const cors = require('cors')
+const urlArchivo = 'http://localhost:3000/src/views/js/usuariosCargos.js';
 
 
 app.use(cors())
@@ -69,9 +71,11 @@ app.post('/', (req, res) => {
 
   //mandamos los parametro a la funcion 
   escribirEnGoogleSheet({ selectedUsuario, selectedCargo, ...req.body })
-  // res.render('index', { selectedUsuario, selectedCargo, usuariosCargos });
+res.render('index', { selectedUsuario, selectedCargo, usuariosCargos });
   res.send('ok')
 });
+
+
 
 //no sirve esto
 app.post('/', escribirEnGoogleSheet);

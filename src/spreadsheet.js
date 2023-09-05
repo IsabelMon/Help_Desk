@@ -67,10 +67,40 @@ async function escribirEnGoogleSheet(formData) {
   }
 }
 
+async function leerDesdeGoogleSheet() {
+  console.log('Leyendo desde Google Sheets...');
+  try {
+    const sheets = google.sheets({ version: 'v4', auth });
+
+    // ID de la hoja de Google Sheets que deseas leer
+    const spreadsheetId = '1XG_KJHAvb-obePiPFwyuuQn3RJagC64i7onbO7YUiAs';
+
+    const sheetTitle = 'BASE_ENCUESTA'; // Cambia esto con el título de tu hoja
+    const range = `${sheetTitle}!A2:O`; // Define el rango que deseas leer
+
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range,
+    });
+
+    const values = response.data.values;
+
+    if (values.length) {
+      console.log('Datos leídos desde Google Sheets:', values);
+    } else {
+      console.log('No se encontraron datos en la hoja de Google Sheets.');
+    }
+
+    console.log('Fin de la lectura desde Google Sheets...');
+  } catch (err) {
+    console.error('Error al leer desde la hoja de Google Sheets:', err.message);
+  }
+}
 
 
 module.exports = {
-  escribirEnGoogleSheet : escribirEnGoogleSheet
+  escribirEnGoogleSheet : escribirEnGoogleSheet,
+  leerDesdeGoogleSheet: leerDesdeGoogleSheet
 }
 
 

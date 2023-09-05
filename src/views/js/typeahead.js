@@ -1,13 +1,8 @@
 
 $(document).ready(function() {
-    
-   
     // Obtén el elemento <input> del campo de nombre
     const $inputNombre = $('#nombre');
-  
     // Inicializa typeahead.js en el campo de nombre
- 
-  
     // Al seleccionar un nombre, actualiza automáticamente el campo de "Cargo"
     $inputNombre.on('typeahead:select', function(e, nombre) {
       console.log('Nombre seleccionado:', nombre);
@@ -23,7 +18,5 @@ $(document).ready(function() {
         $inputTipo.val(selectedInfo.tipo);
       }
     });
-    
-    
-  });
+});
   
