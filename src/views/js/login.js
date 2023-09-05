@@ -1,5 +1,5 @@
 function iniciarSesion() {
-    console.log("esta ")
+    console.log("Si funciona ")
     const tipoUsuario = document.getElementById('tipoUsuario').value;
     
     // Aquí puedes agregar la lógica para redirigir al usuario según su selección

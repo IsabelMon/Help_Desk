@@ -1,3 +1,4 @@
+console.log("Si funciona usuario ")
 const usuariosCargos = {
   "MARIAs OMAIRA ACEVEDO PULGARIN": {
     area: "PRODUCCIÓN",
