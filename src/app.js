@@ -69,7 +69,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.post('/hojaEncuesta', (req, res) => {
+app.post('/', (req, res) => {
   console.log("🚀 datos del body:", req.body)
 
   const selectedUsuario = req.body.solicitadoPor;
@@ -81,7 +81,7 @@ app.post('/hojaEncuesta', (req, res) => {
   res.send('ok')
 });
 
-app.post('/hojaEncuesta', escribirEnGoogleSheet);
+app.post('/', escribirEnGoogleSheet);
 
 app.use(require('./routes/google.routes'));
 module.exports = app;
