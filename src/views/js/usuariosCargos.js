@@ -1,413 +1,359 @@
 console.log("Si funciona usuario ")
 const usuariosCargos = {
-  "MARIAs OMAIRA ACEVEDO PULGARIN": {
-    area: "PRODUCCIÓN",
-    cargo: "OPERARIO DE MANUFACTURA",
+  "ADRIANA  GUTIERREZ TOVAR": {
+    area: "GERENCIA COMERCIAL",
+    cargo: "EJECUTIVO COMERCIAL-BOGOTA",
     placa: "236589",
     tipo: "porttil",
    
   },
-  "LUZ VIVIANA AGUDELO MARTINEZ": {
-    area: "VENTAS",
-    cargo: "EJECUTIVO COMERCIAL",
+  "ALEJANDRA MILENA HERRERA ACEVEDO": {
+    area: "COMPRAS",
+    cargo: "JEFE DE ABASTECIMIENTO Y COMERCIO EXTERIOR",
     placa: "236589",
     tipo: "portatil",
   },
-  "ADRIANA TOVAR": {
-    cargo: "EJECUTIVO COMERCIAL-BOGOTA",
-    area: "Comercial",
+  "ALEX  JIMENEZ HENAO": {
+    cargo: "ANALISTA DE CONTROL CALIDAD",
+    area: "CONTROL CALIDAD - LABORATORIO",
     tipo: "Portátil",
     placa: "64566"
   },
-  "Ana Maria Jimenez Valencia": {
-    cargo: "DIRECTOR TECNICO",
-    area: "Direccion Tecnica",
+  "ALEXANDER  CARVAJAL JOHN": {
+    cargo: "ANALISTA DE OPERACIONES",
+    area: "COMPRAS",
     tipo: "Portatil",
     placa: "93691"
   },
-  "Analista de Sistemas TI": {
-    cargo: "ANALISTA DE SISTEMAS TI",
-    area: "Sistemas",
+  "AMPARO  SIERRA GLORIA": {
+    cargo: "EJECUTIVO COMERCIAL-SANTANDER",
+    area: "GERENCIA COMERCIAL",
     tipo: "Servidor Virtual",
     placa: "n/a"
   },
-  "Analistas Calidad": {
-    cargo: "ANALISTA DE CONTROL CALIDAD",
-    area: "Calidad",
+  "ANA ISABEL MONTES ARROYAVE": {
+    cargo: "APRENDIZ ETAPA PRODUCTIVA TECNICO O TECNOLOGO",
+    area: "SISTEMAS",
     tipo: "Portátil",
     placa: "69905"
   },
-  "Alejandra Milena Herrera": {
-    cargo: "JEFE DE ABASTECIMIENTO Y COMERCIO EXTERIOR",
-    area: "Compras",
+  "ANA MARIA GOMEZ OBREGON": {
+    cargo: "EJECUTIVO COMERCIAL-MEDELLÍN",
+    area: "GERENCIA COMERCIAL",
     tipo: "Portátil",
     placa: "93378"
   },
-  "Ana Graciela": {
-    cargo: "EJECUTIVO COMERCIAL-COSTA",
-    area: "Comercial",
+  "ANA MARIA JIMENEZ VALENCIA": {
+    cargo: "DIRECTORA TECNICA",
+    area: "DISPOSITIVOS MEDICOS",
     tipo: "Portátil",
     placa: "62574"
   },
-  "Auxiliares despachos": {
-    cargo: "AUXILIAR DESPACHOS",
-    area: "Logistica",
+  "AURA ORFILA CEPEDA VILLA": {
+    cargo: "EJECUTIVO COMERCIAL-COSTA",
+    area: "GERENCIA COMERCIAL",
     tipo: "Todo en 1",
     placa: "59574"
   },
-  "Auxiliares Mantenimiento": {
-    cargo: "MECANICO DE MANTENIMIENTO",
-    area: "Mantenimiento",
+  "CARLOS ANDRES SANCHEZ SANCHEZ": {
+    cargo: "AUXILIAR DE DESPACHOS",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Todo en 1",
     placa: "n/a"
   },
-  "Carlos Andrés Suarez Ortiz": {
+  "CARLOS ANDRES SUAREZ ORTIZ": {
     cargo: "JEFE DE CONTABILIDAD",
-    area: "Financiera",
+    area: "FINANCIERA",
     tipo: "Portátil",
     placa: "92343"
   },
-  "Daniel Stiven Zuleta Henao": {
+  "DANIEL STIVEN ZULETA HENAO": {
     cargo: "LIDER DE DESPACHOS",
-    area: "Logistica",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Portátil",
     placa: "83861"
   },
-  "DIANA CAROLINA BETANCUR GALLON": {
-    cargo: "DIRECTOR ADMINISTRATIVO Y FINANCIERO",
-    area: "Financiera",
+  "DANIELA  OROZCO OCAMPO": {
+    cargo: "APRENDIZ ETAPA PRODUCTIVA TECNICO O TECNOLOGO",
+    area: "SALUD OCUPACIONAL",
     tipo: "Portátil",
     placa: "82457"
   },
-  "DIANA CAROLINA BETANCUR GALLON (Sistemas)": {
-    cargo: "ANALISTA DE SISTEMAS TI",
-    area: "Sistemas",
+  "DIANA CAROLINA BETANCUR GALLON": {
+    cargo: "DIRECTOR ADMINISTRATIVO Y FINANCIERO",
+    area: "FINANCIERA",
     tipo: "Portátil",
     placa: ""
   },
-  "EDDY SANTIAGO VILLA": {
+  "EDDY SANTIAGO ALZATE VILLA": {
     cargo: "ANALISTA DE COMPRAS",
-    area: "Compras",
+    area: "COMPRAS",
     tipo: "Portátil",
     placa: "63787"
   },
-  "Estefania Orozco Mosquera": {
+  "ESTEFANIA  OROZCO MOSQUERA": {
     cargo: "ANALISTA DE CONTABILIDAD",
-    area: "Financiera",
+    area: "FINANCIERA",
     tipo: "Portátil",
     placa: "92255"
   },
-  "Gloria Amparo Sierra": {
-    cargo: "EJECUTIVO COMERCIAL-SANTANDER",
-    area: "Comercial",
+  "GONZALO  FLOREZ CASTRO": {
+    cargo: "EJECUTIVO COMERCIAL-BOGOTA",
+    area: "GERENCIA COMERCIAL",
     tipo: "Portátil",
     placa: "63793"
   },
-  "GONZALO CASTRO FLOREZ": {
-    cargo: "EJECUTIVO COMERCIAL-BOGOTA",
-    area: "Comercial",
+  "HUGO ARMANDO CORREA MERCADO": {
+    cargo: "ANALISTA DE SISTEMAS TI",
+    area: "SISTEMAS",
     tipo: "Portátil",
     placa: "66259"
   },
-  "HELIANA SANDOVAL": {
+  "HELIANA DEL SANDOVAL GORDO": {
     cargo: "EJECUTIVO COMERCIAL-NARIÑO",
-    area: "Comercial",
+    area: "GERENCIA COMERCIAL",
     tipo: "Portátil",
     placa: "63762"
   },
-  "Huego Correa": {
-    cargo: "ANALISTA DE SISTEMAS TI",
-    area: "Sistemas",
+  "ISABELA  GONZALEZ LAYOS": {
+    cargo: "ANALISTA DE CONTROL CALIDAD",
+    area: "CONTROL CALIDAD - LABORATORIO",
     tipo: "Portátil",
     placa: "5CG3126NT8"
   },
-  "JENNYFER ALEEXANDRA QUINTANA": {
-    cargo: "EJECUTIVO COMERCIAL-MEDELLIN",
-    area: "Comercial",
+  "JESICA ALEJANDRA DIOSA RUEDA": {
+    cargo: "APRENDIZ ETAPA PRODUCTIVA PROFESIONAL",
+    area: "GESTION HUMANA",
     tipo: "Portátil",
     placa: "64298"
   },
-  "Jessica Diosa": {
-    cargo: "PRACTICANTE GESTION HUMANA",
-    area: "Gestión Humana",
+  "JESSICA LORENA LOPEZ CARDONA": {
+    cargo: "ANALISTA DE TESORERIA Y CARTERA",
+    area: "FINANCIERA",
     tipo: "Portátil",
     placa: "87638"
   },
-  "Jessica lopez cardona": {
-    cargo: "ANALISTA DE TESORERIA Y CARTERA",
-    area: "Financiera",
+  "JOHANNA  GALLEGO RUA": {
+    cargo: "COORDINADOR DE PRODUCCIÓN",
+    area: "DOSIFICACION",
     tipo: "Portátil",
     placa: "90184"
   },
-  "JHON ALEXADER CARVAJAL": {
-    cargo: "ANALISTA DE OPERACIONES",
-    area: "Compras",
+  "JOHN FREDDY ELGUEDO MARTINEZ": {
+    cargo: "AEJECUTIVO COMERCIAL-COSTA",
+    area: "GERENCIA COMERCIAL",
     tipo: "Portátil",
     placa: "74685"
   },
-  "Johana Gallego Rua": {
-    cargo: "COORDINADOR DE PRODUCCION",
-    area: "Manufactura",
+  "JORGE IVAN ZULETA ACEVEDO": {
+    cargo: "ANALISTA DE INVESTIGACIÓN Y DESARROLLO",
+    area: "CONTROL CALIDAD - LABORATORIO",
     tipo: "Portátil",
     placa: "92315"
   },
-  "John Freddy Elguedo Martinez": {
-    cargo: "EJECUTIVO COMERCIAL-COSTA",
-    area: "Comercial",
+  "JOSE LUIS OSSA CARDONA": {
+    cargo: "JEFE GESTION HUMANA",
+    area: "GESTION HUMANA",
     tipo: "Portátil",
     placa: "88255"
   },
-  "JORGE IVAN ZULETA ACEVEDO": {
-    cargo: "ANALISTA DE INVESTIGACIÓN Y DESARROLLO",
-    area: "Calidad",
+  "JUAN ANDRES LUNA HERNANDEZ": {
+    cargo: "AUXILIAR DE DESPACHOS",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Portátil",
     placa: "64274"
   },
-  "jose luis": {
-    cargo: "JEFE GESTION HUMANA",
-    area: "Gestión Humana",
+  "JUAN CAMILO YEPES CARDONA": {
+    cargo: "AUXILIAR DE DESPACHOS",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Portátil",
     placa: "81311"
   },
-  "Juan David Cárdenas": {
+  "JUAN DAVID CARDENAS FLOREZ": {
     cargo: "JEFE DE MANUFACTURA",
-    area: "Manufactura",
+    area: "ADMINISTRACION DE LA PRODUCCION",
     tipo: "Portátil",
     placa: "90173"
   },
-  "juan diego": {
+  "JUAN DIEGO VARGAS ZULETA": {
     cargo: "ANALISTA DE CONTABILIDAD",
-    area: "Financiera",
+    area: "FINANCIERA",
     tipo: "Portátil",
     placa: "5CG312406"
   },
-  "Juan Sebastian": {
-    cargo: "PRACTICANTE SISTEMAS",
-    area: "Sistemas",
+  "JULIANA  GOMEZ GOMEZ": {
+    cargo: "APRENDIZ ETAPA LECTIVA TECNICO O TECNOLOGO",
+    area: "GESTION HUMANA",
     tipo: "Todo en 1",
     placa: "n/a"
   },
-  "Julio Cesar": {
-    cargo: "JEFE DE MANTENIMIENTO Y PROYECTOS",
-    area: "Mantenimiento",
+  "LEONARDO DE ZAPATA ORTIZ": {
+    cargo: "LIDER DE DOSIFICACION Y MEZCLAS",
+    area: "DOSIFICACION",
     tipo: "Portátil",
     placa: "90199"
   },
-  "Leonardo Zapata": {
-    cargo: "LIDER DE DOSIFICACION Y MEZCLAS",
-    area: "Manufactura",
+  "LUZ ANGELA CARDONA CASTRILLON": {
+    cargo: "ANALISTA DE CONTROL CALIDAD",
+    area: "CONTROL CALIDAD - LABORATORIO",
     tipo: "Todo en 1",
     placa: "n/a"
   },
-  "Lider Manufactura": {
+  "LUZ JIMENA RIVERA LOPEZ": {
     cargo: "LIDER DE MANUFACTURA",
-    area: "Manufactura",
+    area: "LINEA B GUANTES",
     tipo: "Todo en 1",
     placa: "59147"
   },
-  "LOPEZ MARIN SANDRA MILENA": {
-    cargo: "ANALISTA DE GESTION HUMANA",
-    area: "Gestión Humana",
+  "LUZ MARY PEREZ CATAÑO": {
+    cargo: "EJECUTIVO COMERCIAL-MEDELLÍN",
+    area: "GERENCIA COMERCIAL",
     tipo: "Portátil",
     placa: "n/a"
   },
-  "Luz mary perez": {
-    cargo: "EJECUTIVO COMERCIAL-MEDELLIN",
-    area: "Comercial",
+  "LUZ MERY GOMEZ VILLEGAS": {
+    cargo: "AUXILIAR DE SERVICIO AL CLIENTE",
+    area: "SERVICIO AL CLIENTE",
     tipo: "Portátil",
     placa: "80054"
   },
-  "LUZ MERY GOMEZ": {
-    cargo: "AUXILIAR DE SERVICIO AL CLIENTE",
-    area: "Servicio al Cliente",
+  "LUZ ORALIA GAVIRIA SOTO": {
+    cargo: "COORDINADOR DE SST",
+    area: "SALUD OCUPACIONAL",
     tipo: "Portátil",
     placa: "93321"
   },
-  "LUZ ORALIA": {
-    cargo: "COORDINADOR DE SST",
-    area: "SST",
+  "LUZ VIVIANA AGUDELO MARTINEZ": {
+    cargo: "EJECUTIVO COMERCIAL-EJE CAFETERO",
+    area: "GERENCIA COMERCIAL",
     tipo: "Portátil",
     placa: "n/a"
   }, 
-  "LUZ VIVIANA AGUDELO": {
-    cargo: "EJECUTIVO COMERCIAL-EJE CAFETERO",
-    area: "Comercial",
+  "MANUELA  PATIÑO OSPINA": {
+    cargo: "ANALISTA DE SISTEMAS DE GESTION",
+    area: "DISPOSITIVOS MEDICOS",
     tipo: "Portátil",
     placa: "68160"
   },
-  "Manuela Patiño Ospina": {
-    cargo: "ANALISTA DE SISTEMAS DE GESTION",
-    area: "Direccion Tecnica",
+  "MARCELA  RESTREPO FLOREZ": {
+    cargo: "ANALISTA DE CONTROL INTERNO",
+    area: "FINANCIERA",
     tipo: "Portátil",
     placa: "93319"
   },
-  "Marcela Restrepo Florez": {
-    cargo: "ANALISTA DE CONTROL INTERNO",
-    area: "Financiera",
+  "MARIANA  RAMIREZ LONDOÑO": {
+    cargo: "ANALISTA DE MERCADEO Y COMERCIAL",
+    area: "MERCADEO",
     tipo: "Portátil",
     placa: "83116"
   },
-  "MARIANA VENTAS": {
-    cargo: "ANALISTA DE MERCADEO Y COMERCIAL",
-    area: "Mercadeo",
+  "MAURICIO  AGUIRRE GIRALDO": {
+    cargo: "LIDER DE MANUFACTURA",
+    area: "LINEA B GUANTES",
     tipo: "Portátil",
     placa: "73145"
   },
-  "MAURICIO ARANGO": {
+  "MAURICIO  ARANGO PUERTA": {
     cargo: "GERENTE GENERAL",
-    area: "Gerencia General",
+    area: "GERENCIA GENERAL",
     tipo: "Portátil",
     placa: "72391"
   },
-  "Melissa Betancur Ospina": {
-    cargo: "JEFE DE VENTAS",
-    area: "Mercadeo",
+  "MAURICIO  JARAMILLO SERNA": {
+    cargo: "LIDER DE MANUFACTURA",
+    area: "LINEA B GUANTES",
     tipo: "Portátil",
     placa: "90172"
   },
-  "Operario Empaque": {
-    cargo: "OPERARIO EMPAQUE",
-    area: "Manufactura",
+  "MELISSA  BETANCUR OSPINA": {
+    cargo: "JEFE DE VENTAS Y MERCADEO",
+    area: "GERENCIA COMERCIAL",
     tipo: "Todo en 1",
     placa: "n/a"
   },
-  "Operario Inspeccion": {
-    cargo: "OPERARIO INSPECCION",
-    area: "Manufactura",
+  "ROBINSON DUVAN ECHEVERRI OCHOA": {
+    cargo: "APRENDIZ ETAPA PRODUCTIVA TECNICO O TECNOLOGO",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Todo en 1",
     placa: "n/a"
   },
-  "Operario Satinado": {
-    cargo: "OPERARIO SATINADO",
-    area: "Manufactura",
+  "ROSA MARIA SANCHEZ YEPES": {
+    cargo: "COORDINADOR DE LOGISTICA",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Todo en 1",
     placa: "n/a"
   },
-  "Operario Secado": {
-    cargo: "OPERARIO SECADO",
-    area: "Manufactura",
+  "SANDRA MILENA LOPEZ MARIN": {
+    cargo: "ANALISTA DE GESTION HUMANA",
+    area: "GESTION HUMANA",
     tipo: "Todo en 1",
     placa: "n/a"
   },
-  "Osvaldo Montoya": {
-    cargo: "ANALISTA DE SISTEMAS TI",
-    area: "Sistemas",
+  "SERGIO ALFONSO GALLO MONSALVE": {
+    cargo: "AUXILIAR DE DESPACHOS",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Servidor Fisico",
     placa: "n/a"
   },
-  "Porteria": {
-    cargo: "PORTERIA",
-    area: "Financiera",
-    tipo: "Todo en 1",
-    placa: "n/a"
-  },
-  "Practicante SST": {
-    cargo: "PRACTICANTE SST",
-    area: "SST",
-    tipo: "Todo en 1",
-    placa: "59151"
-  },
-  "Practicante Logistica": {
-    cargo: "PRACTICANTE LOGISTICA",
-    area: "Logistica",
-    tipo: "Portatil",
-    placa: "86164"
-  },
-  "Presentaciones GH": {
-    cargo: "PRESENTACIONES GESTION HUMANA",
-    area: "Gestión Humana",
-    tipo: "Portatil",
-    placa: "n/a"
-  },
-  "ROSA MARIA SANCHEZ": {
-    cargo: "COORDINADOR DE LOGISTICA",
-    area: "Logistica",
-    tipo: "Portatil",
-    placa: "90179"
-  },
-  "Sergio Estiven Castrillon Betancur": {
+  "SERGIO ESTIVEN CASTRILLON BETANCUR": {
     cargo: "LIDER DE ALMACEN DE MATERIAS PRIMAS Y SUMINISTROS",
-    area: "Almacen",
-    tipo: "Portatil",
-    placa: "79243"
+    area: "ALMACEN MATERIAS PRIMAS",
+    tipo: "Todo en 1",
+    placa: "n/a"
   },
   "SINDY JOHANA GALLEGO DAVILA": {
     cargo: "ANALISTA DE GESTION AMBIENTAL",
-    area: "Ambiental",
+    area: "GESTION AMBIENTAL",
+    tipo: "Todo en 1",
+    placa: "59151"
+  },
+  "SINDY VANESSA SILVA ATEHORTUA": {
+    cargo: "EJECUTIVO COMERCIAL-MEDELLÍN",
+    area: "GERENCIA COMERCIAL",
+    tipo: "Portatil",
+    placa: "86164"
+  },
+  "STIVEN  CARMONA CARDONA": {
+    cargo: "JEFE DE CALIDAD",
+    area: "CONTROL CALIDAD - LABORATORIO",
+    tipo: "Portatil",
+    placa: "n/a"
+  },
+  "VALENTINA  MERCADO FLOREZ": {
+    cargo: "APRENDIZ ETAPA LECTIVA TECNICO O TECNOLOGO",
+    area: "CONTROL CALIDAD - LABORATORIO",
+    tipo: "Portatil",
+    placa: "90179"
+  },
+  "YASMIN  RAMIREZ GOMEZ": {
+    cargo: "AUXILIAR DE SERVICIO AL CLIENTE",
+    area: "SERVICIO AL CLIENTE",
+    tipo: "Portatil",
+    placa: "79243"
+  },
+  "YAZMIN  JIMENEZ SANTANA": {
+    cargo: "JEFE DE LOGISTICA",
+    area: "LOGISTICA Y DISTRIBUCION",
     tipo: "Portatil",
     placa: "90201"
   }, 
-  "Practicante SST": {
-    cargo: "PRACTICANTE SST",
-    area: "SST",
+  "YEFERSON ANTONIO LAGUNA VELASQUEZ": {
+    cargo: "APRENDIZ ETAPA LECTIVA TECNICO O TECNOLOGO",
+    area: "MANTENIMIENTO",
     tipo: "Todo en 1",
     placa: "59151"
   },
-  "Practicante Logistica": {
-    cargo: "PRACTICANTE LOGISTICA",
-    area: "Logistica",
+  "YULEDIS PATRICIA OSPINO MONTESINO": {
+    cargo: "EJECUTIVO COMERCIAL-COSTA",
+    area: "GERENCIA COMERCIAL",
     tipo: "Portatil",
     placa: "86164"
   },
-  "Presentaciones GH": {
-    cargo: "PRESENTACIONES GESTION HUMANA",
-    area: "Gestión Humana",
+  "PORTEROS ": {
+    cargo: "PORTERIA",
+    area: "SEGURIDAD",
     tipo: "Portatil",
     placa: "n/a"
-  },
-  "ROSA MARIA SANCHEZ": {
-    cargo: "COORDINADOR DE LOGISTICA",
-    area: "Logistica",
-    tipo: "Portatil",
-    placa: "90179"
-  },
-  "Sergio Estiven Castrillon Betancur": {
-    cargo: "LIDER DE ALMACEN DE MATERIAS PRIMAS Y SUMINISTROS",
-    area: "Almacen",
-    tipo: "Portatil",
-    placa: "79243"
-  },
-  "SINDY JOHANA GALLEGO DAVILA": {
-    cargo: "ANALISTA DE GESTION AMBIENTAL",
-    area: "Ambiental",
-    tipo: "Portatil",
-    placa: "90201"
-  },
-  "sistemas": {
-    cargo: "ANALISTA DE SISTEMAS TI",
-    area: "Sistemas",
-    tipo: "Portatil",
-    placa: "n/a"
-  },
-  "STIVEN CARMONA CARDONA": {
-    cargo: "JEFE DE CALIDAD",
-    area: "Calidad",
-    tipo: "Portatil",
-    placa: "86743"
-  },
-  "VANESA SILVA": {
-    cargo: "EJECUTIVO COMERCIAL-MEDELLIN",
-    area: "Comercial",
-    tipo: "Portatil",
-    placa: "93501"
-  },
-  "YASMIN RAMIREZ GOMEZ": {
-    cargo: "AUXILIAR DE SERVICIO AL CLIENTE",
-    area: "Servicio al Cliente",
-    tipo: "Portatil",
-    placa: "90200"
-  },
-  "Yazmin Jiménez Santana": {
-    cargo: "JEFE DE LOGISTICA",
-    area: "Logistica",
-    tipo: "Portatil",
-    placa: "5CG3126NSS"
-  },
-  "Yuledis Ospino": {
-    cargo: "EJECUTIVO COMERCIAL-COSTA",
-    area: "Comercial",
-    tipo: "Portatil",
-    placa: "93519"
   }
  
 };
