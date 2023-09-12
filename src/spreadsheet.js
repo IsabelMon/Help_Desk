@@ -46,10 +46,14 @@ async function escribirEnGoogleSheet(formData) {
             '', // Esto es para omitir la columna D
             '', // Esto es para omitir la columna E
             '',
+            '',
+            '',
+            formData.tipoSolicitud,
             formData.tipoAtencion,
             formData.estado,
             formData.prioridad,
             formData.descripcionProblema,
+            formData.tipoServicio,
             formData.solicitadoPor,
             formData.area,
             formData.cargo,
