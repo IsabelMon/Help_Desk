@@ -9,9 +9,131 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js-bootstrap-css/1.2.1/typeaheadjs.min.css" rel="stylesheet">
   <title>Formulario para Mesa de Ayuda</title>
   <style>
+    	.success-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 255, 0, 0.5);
+			display: none;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+		}
+
+		.success-message {
+			text-align: center;
+		}
+
+		.success-message h1 {
+			color: #fff;
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+
+		.success-message p {
+			color: #fff;
+			font-size: 18px;
+		}
+     body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        :root{
+        --white: #FFFFFF;
+        --black: #000000;
+        --dark: #232830;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #0056b3;
+        --sm:14px;
+        --md:16px;
+        --lg:18px;
+        
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu{
+        display: none;
+       }
+       .logo{
+        width: 100px;
+       }
+       .navbar-left ul,
+       .navbar-right ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        height: 60px;
+       }
+
+       .navbar-left{
+        display: flex;
+        margin-left: 12px;
+       }
+
+       .navbar-left ul{ 
+        display: flex;
+        margin-left: 12px;
+       }
+       .navbar-left ul li a,
+       .navbar-right ul li a{
+        text-decoration: none;
+        color: var(--very-light-pink);
+        border: 1px solid var(--white);
+        padding: 8px;
+        border-radius: 8px;
+       }
+       .navbar-left ul li a:hover,
+       .navbar-right ul li a:hover{
+        text-decoration: none;
+        color: var(--hospital-green);
+        border: 1px solid var(--hospital-green);
+       }
+       .navbar-email{
+        color: var(--very-light-pink);
+        font-size: var(--sm);
+        margin-right: 14px;
+       }
+       .navbar-shopping-card{
+        position: relative;
+       }
+       .navbar-shopping-card div{
+        width: 16px;
+        height: 16px;
+        background-color: var(--hospital-green);
+        border-radius: 50%;
+        font-size: var(--sm);
+        font-weight: bold;
+        position: absolute;
+        top:-6px ;
+        right: -3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       @media (max-width: 640px){
+        .menu{
+            display: block;
+        }
+        .navbar-left ul {
+            display: none;
+        }
+        .navbar-email{
+            display: none;
+        }
+       }
     
     .container {
-        background-color: #3498db;
+        background-color: #0056b3;
         color: #fff; 
         border-radius: 10px;
         max-width: 900px;
@@ -35,8 +157,8 @@
     }
 
     .btn-primary {
-        background-color: #2980b9; /* Color de fondo azul más oscuro para el botón */
-        color: #fff; /* Color de texto blanco */
+        background-color: #fff; /* Color de fondo azul más oscuro para el botón */
+        color: #0056b3; /* Color de texto blanco */
         border: none;
         border-radius: 5px;
         padding: 10px 20px;
@@ -45,29 +167,37 @@
 </style>
 </head>
 <body>
-  
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Encuesta</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="">Informes</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="buscarequipos.html">Buscar equipos</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" aria-disabled="true">Hoja de vida del equipo</a>
-                  </li>
-              </ul>
-          </div>
+
+          <nav>
+            <img src="/src/views/css/img/logo.png" alt="logo">
+            <div class="navbar-left">
+    
+                <ul>
+                    <li>
+                        <a href="">Encuesta</a>
+                    </li>
+                    <li>
+                        <a href="">Informes</a>
+                    </li>
+                    <li>
+                        <a href="">Buscar equipos</a>
+                    </li>
+                    <li>
+                        <a href="">furnitures</a>
+                    </li>
+                    <li>
+                        <a href="buscarequipos.html">Hoja de vida del equipo</a>
+                    </li>
+        
+                </ul>
+            </div>
+
+          <div class="navbar-right">
+            <ul>
+                <li class=navbar-email"">SISTEMAS</li>
+                
+            </ul>
+        </div>
       </div>
   </nav>
 
@@ -82,14 +212,52 @@
             <input type="datetime-local" class="form-control" id="fechaHoraSolicitud" name="fechaHoraSolicitud">
           </div>
         </div>
+        <script>
+          // Obtener la fecha y hora actual
+          function obtenerFechaHoraActual() {
+              const ahora = new Date();
+              const anio = ahora.getFullYear();
+              const mes = (ahora.getMonth() + 1).toString().padStart(2, '0');
+              const dia = ahora.getDate().toString().padStart(2, '0');
+              const horas = ahora.getHours().toString().padStart(2, '0');
+              const minutos = ahora.getMinutes().toString().padStart(2, '0');
+              const horaActual = `${anio}-${mes}-${dia}T${horas}:${minutos}`;
+              return horaActual;
+          }
+  
+          // Establecer la hora actual en el campo de entrada
+          document.addEventListener("DOMContentLoaded", function () {
+              const fechaHoraSolicitudInput = document.getElementById("fechaHoraSolicitud");
+              fechaHoraSolicitudInput.value = obtenerFechaHoraActual();
+          });
+      </script>
 
         <!-- Fecha y Hora Finalizado -->
         <div class="col-md-4">
           <div class=" mb-2">
             <label class="form-label" for="fechaHoraFinalizado">Fecha y Hora Finalizado:</label>
-            <input type="datetime-local" class="form-control" id="fechaHoraFinalizado" name="fechaHoraFinalizado">
+            <input type="text" class="form-control" id="fechaHoraFinalizado" name="fechaHoraFinalizado">
           </div>
         </div>
+        <script>
+          // Obtener la fecha y hora actual
+          function obtenerFechaHoraActual() {
+              const ahora = new Date();
+              const anio = ahora.getFullYear();
+              const mes = (ahora.getMonth() + 1).toString().padStart(2, '0');
+              const dia = ahora.getDate().toString().padStart(2, '0');
+              const horas = ahora.getHours().toString().padStart(2, '0');
+              const minutos = ahora.getMinutes().toString().padStart(2, '0');
+              const horaActual = `${anio}-${mes}-${dia}T${horas}:${minutos}`;
+              return horaActual;
+          }
+  
+          // Establecer la hora actual en el campo de entrada
+          document.addEventListener("DOMContentLoaded", function () {
+              const fechaHoraSolicitudInput = document.getElementById("fechaHoraSolicitud");
+              fechaHoraSolicitudInput.value = obtenerFechaHoraActual();
+          });
+      </script>
       
 
       <div class="row">
@@ -254,15 +422,22 @@
       <div class="input-group mb-3"">
         <button type="submit" class="btn btn-primary">Enviar</button>
       </div>
-      
+      <div id="pantalla-exito" class="success-overlay">
+        <div class="success-message">
+          <h1>¡Éxito!</h1>
+          <p>Tu solicitud se ha procesado correctamente.</p>
+        </div>
+      </div>
     </form>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
   <script src="/js/usuariosCargos.js"></script>
+  <script src="/js/exito.js"></script>
   <script src="/js/typeahead.js"></script>
   <script src="/js/script.js"></script>
+  <script src="/js/hora"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

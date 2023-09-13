@@ -60,6 +60,9 @@ app.get('/login.js', (req, res) => {
 app.get('/script.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'views','js','script.js'));
 });
+app.get('/exito.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views','js','exito.js'));
+});
 app.get('/typeahead.js', (req, res) => {
   res.sendFile(path.join(__dirname, 'views','js','typeahead.js'));
 });
