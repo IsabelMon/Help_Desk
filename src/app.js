@@ -81,7 +81,7 @@ app.post('/', (req, res) => {
   
   escribirEnGoogleSheet({ selectedUsuario, selectedCargo, ...req.body })
   //res.render('hojaEncuesta.html', { selectedUsuario, selectedCargo, usuariosCargos });
-  res.send('ok')
+  res.sendFile(path.join(__dirname, 'views','html','todook.html'));
 });
 
 app.post('/', escribirEnGoogleSheet);

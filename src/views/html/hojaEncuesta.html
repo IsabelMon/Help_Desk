@@ -203,7 +203,7 @@
 
   <div class="container mt-5">
     <H1>Mesa de Ayuda</H1>
-    <form method="POST" action="/">
+    <form method="POST" id="hojacalculo" action="/">
       <div class="row">
         <!-- Fecha y Hora de Solicitud -->
         <div class="col-md-4">
@@ -420,16 +420,13 @@
       </div>
       
       <div class="input-group mb-3"">
-        <button type="button" onclick="pantallaexito()"" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
       </div>
-      <div id="pantalla-exito" class="success-overlay">
-        <div class="success-message">
-          <h1>¡Éxito!</h1>
-          <p>Tu solicitud se ha procesado correctamente.</p>
-        </div>
+      
       </div>
     </form>
   </div>
+  <script>document.getElementById('hojacalculo').reset();</script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
