@@ -236,28 +236,10 @@
         <div class="col-md-4">
           <div class=" mb-2">
             <label class="form-label" for="fechaHoraFinalizado">Fecha y Hora Finalizado:</label>
-            <input type="text" class="form-control" id="fechaHoraFinalizado" name="fechaHoraFinalizado">
+            <input type="datetime-local" class="form-control" id="fechaHoraFinalizado" name="fechaHoraFinalizado">
           </div>
         </div>
-        <script>
-          // Obtener la fecha y hora actual
-          function obtenerFechaHoraActual() {
-              const ahora = new Date();
-              const anio = ahora.getFullYear();
-              const mes = (ahora.getMonth() + 1).toString().padStart(2, '0');
-              const dia = ahora.getDate().toString().padStart(2, '0');
-              const horas = ahora.getHours().toString().padStart(2, '0');
-              const minutos = ahora.getMinutes().toString().padStart(2, '0');
-              const horaActual = `${anio}-${mes}-${dia}T${horas}:${minutos}`;
-              return horaActual;
-          }
-  
-          // Establecer la hora actual en el campo de entrada
-          document.addEventListener("DOMContentLoaded", function () {
-              const fechaHoraSolicitudInput = document.getElementById("fechaHoraSolicitud");
-              fechaHoraSolicitudInput.value = obtenerFechaHoraActual();
-          });
-      </script>
+       
       
 
       <div class="row">
