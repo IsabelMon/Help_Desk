@@ -5,7 +5,9 @@ function main() {
     //lista de parametros de las tragetas
     const listParams = [
         { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png', title: 'Hoja de Requerimiento', description: "FO-SI-003 Informe de Requerimientos Sistemas 2023 ", hoja:'hojaEncuesta.html' },
-        { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png', title: 'Buscar equipos', description: "FO-SI-003 Hoja de Vida del Equipo Sistemas 2023 ", hoja:'buscarequipos.html' },
+        { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png', title: 'Buscar Equipos', description: "FO-SI-003 Buscar equipos 2023 ", hoja:'buscarequipos.html' },
+        { url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png', title: 'Hoja de Vida del Equipo', description: "FO-SI-003 Hoja de Vida del Equipo Sistemas 2023 ", hoja:'buscarequipos.html' },
+    
     ]
 
     //genera una lista con todaas las tragetas y las une 
@@ -28,7 +30,7 @@ function main() {
 
 function generarCard(params) {
     let ruta = `
-    <div class="col-md-4 col-lg-4 mb-4" >
+    <div class="col-md-4 col-lg-3 mb-3" >
         <div class="card "  style="width: 18rem;">
           <img src="${params.url}" class="card-img-top" >
           <div class="card-body">
