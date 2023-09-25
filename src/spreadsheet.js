@@ -66,6 +66,7 @@ async function escribirEnGoogleSheet(formData) {
     console.log('Datos a escribir:', formData);
     console.log('Fin de la escritura en Google Sheets...');
     console.log('Datos escritos en la hoja de cálculo.');
+    console.log("fecha solcitud", fechaHoraSolicitud);
   } catch (err) {
     console.error('Error al escribir en la hoja de cálculo:', err.message);
   }
